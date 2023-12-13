@@ -3,3 +3,6 @@
 
 # ignore a.exe file.
 a.exe
+
+# ignore all .o files.
+*.o
