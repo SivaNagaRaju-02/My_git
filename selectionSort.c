@@ -1,5 +1,5 @@
 #include "selectionSort.h"
-void selectionSort(int list[10], int n) {
+void selectionsort(int list[20], int n) {
     int i,j,x,c;
 
     for(i=0; i<n; i++) {

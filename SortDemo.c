@@ -25,7 +25,7 @@ void main() {
 	
     showList("List");
 
-    bubbleSort(x, n);
+    selectionsort(x, n);
 
     showList("\nSorted List");
 }
