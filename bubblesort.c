@@ -18,7 +18,7 @@ void main() {
 
     bubbleSort();
 
-    showList("Sorted List");
+    showList("\nSorted List");
 }
 
 void showList(char str[20]) {
