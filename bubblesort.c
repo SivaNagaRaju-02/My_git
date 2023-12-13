@@ -14,17 +14,16 @@ void main() {
         scanf("%d",&list[i]);
     }
 
-    printf("Origional List\n");
-    showList();
+    showList("List");
 
     bubbleSort();
-    printf("Sorted List\n");
-    showList();
+
+    showList("Sorted List");
 }
 
-void showList() {
+void showList(char str[20]) {
     int i;
-	printf("Array = [");
+	printf("%s = [",str);
 	for(i=0; i<n; i++) {
 		if(i < n-1) printf("%d, ",list[i]);
 		else printf("%d]\n",list[i]);
