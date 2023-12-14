@@ -6,3 +6,6 @@ a.exe
 
 # ignore all .o files.
 *.o
+
+# ignore all files in Ignore
+Ignore/*
