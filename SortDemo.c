@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "bubbleSort.h"
 #include "selectionSort.h"
+#include "insertionSort.h"
 
 int n, list[20], x[20];
 
@@ -29,6 +30,7 @@ void main() {
             printf("\n\t****MENU****\n");
             printf("[1].Bubble Sort\n");
             printf("[2].Selection Sort\n");
+            printf("[3].Insertion Sort\n");
             printf("[9].Update List\n");
             printf("[0].Exit\n");
             printf("\nChoose Any Option: ");
@@ -42,6 +44,10 @@ void main() {
                 case 2 : setX();
                     selectionsort(x,n);
                     showList(x, "SelctSortList");
+                    break;
+                case 3 : setX();
+                    insertionsort(x,n);
+                    showList(x, "InSortList");
                     break;
                 case 9 : q2 = 1;
                     break;
