@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include "bubbleSort.h"
 #include "selectionSort.h"
-#include "mergeSort.h"
 #include "insertionSort.h"
+#include "mergeSort.h"
+#include "quickSort.h"
 
 int n, list[20], x[20];
 
@@ -12,20 +13,26 @@ void readList();
 void setX();
 
 void main() {
-    int i,opt,q1=0,q2;
+    int i,op,opt,q1=0,q2;
     while(q1 == 0) {
+
         printf("Enter a Number: ");
         scanf("%d",&n);
         q2 = 0;
 
-        /*for(i=0; i<n; i++) {
-            printf("Enter Element-%d: ",i+1);
-            scanf("%d",&list[i]);
-        }*/
+        printf("\n[1]. Manual Read List.\n");
+        printf("[Any]. Auto Read List.\n");
+        printf("Choose An Option: ");
+        scanf("%d",&op);
 
-        readList();
-        //printf("\n");
-        //showList(list, "List");
+        if(op == 1) {
+            for(i=0; i<n; i++) {
+                printf("Enter Element-%d: ",i+1);
+                scanf("%d",&list[i]);
+            }
+        }else   readList();
+
+        showList(list, "\nList");
 
         while(q2 == 0) {
             printf("\n\t****MENU****\n");
@@ -33,6 +40,7 @@ void main() {
             printf("[2].Selection Sort\n");
             printf("[3].Insertion Sort\n");
             printf("[4].merge Sort\n");
+            printf("[5].Quick Sort\n");
             printf("[9].Update List\n");
             printf("[0].Exit\n");
             printf("\nChoose Any Option: ");
@@ -54,6 +62,11 @@ void main() {
                 case 4 : setX();
                     mergesort(x, n);
                     showList(x, "MergeSortList");
+                    break;
+                case 5 : setX();
+                    quicksort(x, n);
+                    showList(x, "QuickSortList");
+                    break;
                 case 9 : q2 = 1;
                     break;
                 case 0 : q1 = q2 = 1;
@@ -87,5 +100,4 @@ void setX() {
         x[i] = list[i];
     }
     showList(x, "\nList");
-    printf("\n");
 }
