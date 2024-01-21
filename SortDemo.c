@@ -12,7 +12,7 @@ void showList(int [20], char [20]);
 void readList();
 void setX();
 
-void main() {
+int main() {
     int i,op,opt,q1=0,q2;
     while(q1 == 0) {
 
@@ -76,6 +76,7 @@ void main() {
             }
         }
     }
+    return 0;
 }
 
 void readList() {
