@@ -1,10 +1,12 @@
 public class mergeSort extends sortArray{
     public void sort(int[] list) {
+        System.out.println("Inside MergeSort");
         int p,r;
         p = 0;
         r = list.length;
 
         devide(list, p, r-1);
+        System.out.println("MergeSort Ended");
     }
 
     private static void devide(int[] x, int p, int r) {

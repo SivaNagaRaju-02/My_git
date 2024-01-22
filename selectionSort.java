@@ -21,6 +21,6 @@ public class selectionSort extends sortArray{
             }
             if(t != i) swap(list, i, t);
         }
-        System.out.println("SelectionSort Ended.\n");
+        System.out.println("SelectionSort Ended.");
     }
 }

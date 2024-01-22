@@ -17,6 +17,6 @@ public class insertionSort extends sortArray{
                 j--;
             }
         }
-        System.out.println("InsertionSort Ended.\n");
+        System.out.println("InsertionSort Ended.");
     }
 }

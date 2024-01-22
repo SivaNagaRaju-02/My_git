@@ -63,3 +63,47 @@ class insertionSortThrd implements Runnable {
         srt.sort(list);
     }
 }
+
+class quickSortThrd implements Runnable {
+    Thread thrd;
+    static sortArray srt;
+    static int[] list;
+
+    quickSortThrd(String name) {
+        thrd = new Thread(this, name);
+    }
+
+    public static quickSortThrd quickSort(int[] x, String name) {
+        srt = new quickSort();
+        list = x;
+        quickSortThrd newThread = new quickSortThrd(name);
+        newThread.thrd.start();
+        return newThread;
+    }
+
+    public void run() {
+        srt.sort(list);
+    }
+}
+
+class mergeSortThrd implements Runnable {
+    Thread thrd;
+    static sortArray srt;
+    static int[] list;
+
+    mergeSortThrd(String name) {
+        thrd = new Thread(this, name);
+    }
+
+    public static mergeSortThrd mergeSort(int[] x, String name) {
+        srt = new mergeSort();
+        list = x;
+        mergeSortThrd newThread = new mergeSortThrd(name);
+        newThread.thrd.start();
+        return newThread;
+    }
+
+    public void run() {
+        srt.sort(list);
+    }
+}

@@ -7,7 +7,9 @@ public class quickSort extends sortArray{
     }
     
     public void sort(int[] list) {
+        System.out.println("Inside QuickSort");
         sortList(list, 0, list.length-1);
+        System.out.println("QuickSort Ended.");
     }
 
     private static void partition(int[] list, int p, int q, int r) {

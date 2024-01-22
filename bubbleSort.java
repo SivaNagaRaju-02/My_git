@@ -13,6 +13,6 @@ public class bubbleSort extends sortArray{
                 if(list[j] > list[j+1]) swap(list, j, j+1);
             }
         }
-        System.out.println("BubbleSort Ended.\n");
+        System.out.println("BubbleSort Ended.");
     }
 }
