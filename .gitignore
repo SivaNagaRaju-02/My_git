@@ -2,7 +2,7 @@
 *.txt
 
 # ignore a.exe file.
-a.exe
+*.exe
 
 # ignore all .o files.
 *.o
