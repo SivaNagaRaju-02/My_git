@@ -9,3 +9,6 @@ a.exe
 
 # ignore all files in Ignore
 Ignore/*
+
+# ignore all pycache files
+*.pyc
